@@ -46,8 +46,15 @@
   .section-title { font-family: 'DM Serif Display', serif; font-size: 32px; }
   .section-line { flex: 1; height: 1px; background: var(--border); }
   .section-count { font-size: 12px; color: var(--ink-muted); letter-spacing: 0.06em; }
-  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-  .gallery-card { border: 1px solid var(--border); border-radius: 2px; overflow: hidden; background: #fff; transition: transform 0.2s, border-color 0.2s; }
+  .gallery-grid { display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;}
+  .gallery-card { border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.2s, border-color 0.2s;
+  height: 100%;}
   .gallery-card:hover { transform: translateY(-3px); border-color: var(--accent); }
   .gallery-card.featured { grid-column: span 2; }
 
@@ -125,8 +132,8 @@
 <nav>
   <span class="nav-name">Sanjana Khedikar</span>
   <div class="nav-links">
+   <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </div>
@@ -138,7 +145,14 @@
     <h1 class="hero-name">Building things that <em>work</em> better.</h1>
     <p class="hero-bio">I'm a mechanical engineer with hands-on experience in R&D, microfluidics, medical device design, and humanitarian engineering. I care about technical rigor, honest data, and real-world impact.</p>
     <div class="hero-cta">
-      <a href="mailto:sanjanakhedikar@gmail.com" class="btn btn-primary">Email Me</a>
+  <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:12px;">
+    <span style="font-size:13px; color:var(--ink-soft);">
+      Email: sanjanakhedikar@gmail.com
+    </span>
+    <span style="font-size:13px; color:var(--ink-soft);">
+      Phone: +1 412 500 2148
+    </span>
+  </div>
       <a href="https://www.linkedin.com/in/sanjana-khedikar/" target="_blank" class="btn btn-outline">LinkedIn</a>
     </div>
   </div>
@@ -151,7 +165,7 @@
       </div>
     </div>
     <div class="hero-stats">
-      <div class="stat-pill"><span class="stat-num">3</span><span class="stat-label">Internships</span></div>
+      <div class="stat-pill"><span class="stat-num">3</span><span class="stat-label">Experiences</span></div>
       <div class="stat-pill"><span class="stat-num">3</span><span class="stat-label">Projects</span></div>
     </div>
   </div>
@@ -236,24 +250,7 @@
       </div>
     </div>
 
-    <div class="gallery-card featured">
-      <div class="slideshow" data-slideshow>
-        <div class="slides">
-          <div class="slide"><div class="slide-placeholder"><span class="plus">+</span><p>Add photo 1</p></div></div>
-          <div class="slide"><div class="slide-placeholder"><span class="plus">+</span><p>Add poster / photo 2</p></div></div>
-          <div class="slide"><div class="slide-placeholder"><span class="plus">+</span><p>Add photo 3</p></div></div>
-        </div>
-        <button class="slide-arrow prev">&#8592;</button>
-        <button class="slide-arrow next">&#8594;</button>
-        <div class="slide-dots"></div>
-      </div>
-      <div class="gallery-body">
-        <span class="gallery-tag">Research · UC Irvine</span>
-        <h3 class="gallery-title">XACT Bio-imaging Research & Fellowship</h3>
-        <p class="gallery-desc">Conducted undergraduate research with Dr. Xiang on X-ray-induced Acoustic Computed Tomography (XACT). Designed and executed 20+ experiments using Python to optimize imaging performance. Presented at an Undergraduate Research Symposium with granted funding.</p>
-        <div class="gallery-chips">
-          <span class="chip">XACT</span><span class="chip">Python</span><span class="chip">Bio-imaging</span><span class="chip">Symposium presenter</span><span class="chip">Nov 2023–May 2024</span>
-        </div>
+   
       </div>
     </div>
 
