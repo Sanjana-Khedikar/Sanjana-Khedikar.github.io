@@ -46,9 +46,11 @@
   .section-title { font-family: 'DM Serif Display', serif; font-size: 32px; }
   .section-line { flex: 1; height: 1px; background: var(--border); }
   .section-count { font-size: 12px; color: var(--ink-muted); letter-spacing: 0.06em; }
-  .gallery-grid { display: grid;
+  .gallery-grid {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;}
+  gap: 1.25rem;
+  align-items: stretch;}
   .gallery-card { border: 1px solid var(--border);
   border-radius: 2px;
   overflow: hidden;
@@ -59,7 +61,10 @@
   .personal-grid {  display: grid;grid-template-columns: repeat(3, 1fr);  gap: 1.25rem;}
 .personal-card {border: 1px solid var(--border);border-radius: 2px;background: #fff;padding: 0.75rem;transition: transform 0.2s, border-color 0.2s;}
 .personal-card:hover {transform: translateY(-3px);  border-color: var(--accent);}
-.personal-media {width: 100%;aspect-ratio: 4/3;overflow: hidden; border-radius: 2px;  margin-bottom: 0.75rem;}
+.personal-card .slideshow {  aspect-ratio: 4/3;}
+.personal-card {  padding: 0.6rem;}
+.personal-desc {  font-size: 12px;}
+ .personal-media {width: 100%;aspect-ratio: 4/3;overflow: hidden; border-radius: 2px;  margin-bottom: 0.75rem;}
 .personal-media img { width: 100%;height: 100%; object-fit: cover;}
 .personal-desc {font-size: 13px;color: var(--ink-soft); line-height: 1.5;}
   /* SLIDESHOW */
@@ -235,7 +240,7 @@
     <h3 class="timeline-role">XACT Bio-imaging Researcher</h3>
 
     <!-- SLIDESHOW -->
-    <div class="slideshow" data-slideshow style="transform:scale(0.55); transform-origin: left top;">
+    <div class="slideshow" data-slideshow style="max-width: 400px; margin-bottom: 1rem;">
       <div class="slides">
         <div class="slide">
           <img src="XACT.png" alt="XACT experiment setup" />
@@ -314,6 +319,7 @@
              <img src="dallas2.png" alt="Site layout screenshot" />
             </div>
         </div>
+        </div>
         <button class="slide-arrow prev">&#8592;</button>
         <button class="slide-arrow next">&#8594;</button>
         <div class="slide-dots"></div>
@@ -366,42 +372,72 @@
 
   <div class="personal-grid">
 
-    <div class="personal-card">
-      <div class="personal-media">
-        <img src="tijuanablue.JPG" alt="Personal Project 1">
-      </div>
-      <div class="personal-media">
-        <img src="tijuanakids.HEIC" alt="tijuana Project 1">
-      </div>
-       <div class="personal-media">
-        <img src="tijuanapurple.JPG" alt="tijuana Project ">
-      </div>
-      <div class="personal-media">
-        <img src="tijuanadog.jpg" alt="tijuana  ">
-      </div>
-     
-      <p class="personal-desc">International Project Chair for Engineers Without Borders.</p>
+   <div class="personal-card">
+  <div class="slideshow" data-slideshow>
+    <div class="slides">
+      <div class="slide"><img src="tijuanablue.JPG"></div>
+      <div class="slide"><img src="tijuanakids.HEIC"></div>
+      <div class="slide"><img src="tijuanapurple.JPG"></div>
+      <div class="slide"><img src="tijuanadog.jpg"></div>
     </div>
 
-    <div class="personal-card">
-      <div class="personal-media">
-        <img src="droneCAD.png" alt="Personal Project 2">
-      </div>
-      <div class="personal-media">
-        <img src="drone.JPG" alt="Personal drone 2">
-      </div>
-      <p class="personal-desc"> Drone Project.</p>
+    <button class="slide-arrow prev">&#8592;</button>
+    <button class="slide-arrow next">&#8594;</button>
+    <div class="slide-dots"></div>
+  </div>
+
+  <p class="personal-desc">
+    International Project Chair for Engineers Without Borders.
+  </p>
+</div>
+<div class="personal-card">
+  <div class="slideshow" data-slideshow>
+    <div class="slides">
+      <div class="slide"><img src="SASE.jpg"></div>
+   
     </div>
 
-    <div class="personal-card">
-      <div class="personal-media">
-        <img src="speculumCAD.png" alt="Personal Project 3">
-      </div>
-      <div class="personal-media">
-        <img src="speculum.png" alt=" Project 3">
-      </div>
-      <p class="personal-desc"> 4-Pronged Speculum With Light Attachment.</p>
+    <button class="slide-arrow prev">&#8592;</button>
+    <button class="slide-arrow next">&#8594;</button>
+    <div class="slide-dots"></div>
+  </div>
+
+  <p class="personal-desc">
+    A pneumatic piston–driven robot that uses a one-way bearing gear system for propulsion and an Arduino-based low-pass filtered PD control system with feedback to maintain heading stability.
+  </p>
+</div>
+   <div class="personal-card">
+  <div class="slideshow" data-slideshow>
+    <div class="slides">
+      <div class="slide"><img src="droneCAD.png"></div>
+      <div class="slide"><img src="drone.JPG"></div>
     </div>
+
+    <button class="slide-arrow prev">&#8592;</button>
+    <button class="slide-arrow next">&#8594;</button>
+    <div class="slide-dots"></div>
+  </div>
+
+  <p class="personal-desc">
+    Drone Project.
+  </p>
+</div>
+<div class="personal-card">
+  <div class="slideshow" data-slideshow>
+    <div class="slides">
+      <div class="slide"><img src="speculumCAD.png"></div>
+      <div class="slide"><img src="speculum.png"></div>
+    </div>
+
+    <button class="slide-arrow prev">&#8592;</button>
+    <button class="slide-arrow next">&#8594;</button>
+    <div class="slide-dots"></div>
+  </div>
+
+  <p class="personal-desc">
+    4-Pronged Speculum With Light Attachment.
+  </p>
+</div>
 
   </div>
 </section>
