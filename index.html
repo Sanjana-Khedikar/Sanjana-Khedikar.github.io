@@ -56,7 +56,10 @@
   overflow: hidden;
   background: #fff;
   transition: transform 0.2s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
   height: 100%;}
+ .gallery-body { padding: 1.25rem; display: flex; flex-direction: column; flex-grow: 1;}
   .gallery-card:hover { transform: translateY(-3px); border-color: var(--accent); }
   .personal-grid {  display: grid;grid-template-columns: repeat(3, 1fr);  gap: 1.25rem;}
 .personal-card {border: 1px solid var(--border);border-radius: 2px;background: #fff;padding: 0.75rem;transition: transform 0.2s, border-color 0.2s;}
@@ -284,26 +287,26 @@
     <div class="gallery-card">
       <div class="slideshow" data-slideshow>
         <div class="slides">
-          <div class="slide">
-          <img src="chip.png" alt="Microfluidic Chip" />
+          <div class="slide"><img src="chip.png" alt="Microfluidic Chip" />
           </div>
-          <div class="slide">
-             <img src="microfluidicCAD.png" alt="Microfluidic CAD" />
+          <div class="slide"><img src="microfluidicCAD.png" alt="Microfluidic CAD" />
             </div>
          <div class="slide">
              <img src="microfluidic.png" alt="Microfluidic Imaging" />
             </div>
         </div>
-        </div>
         <button class="slide-arrow prev">&#8592;</button>
         <button class="slide-arrow next">&#8594;</button>
         <div class="slide-dots"></div>
       </div>
+     
       <div class="gallery-body">
         <span class="gallery-tag">Microfluidics · BioMiNT Lab</span>
         <h3 class="gallery-title">Thermoplastic Microfluidic Chip Redesign for Scaled-up Production</h3>
         <p class="gallery-desc">Redesigning a PDMS microfluidic chip for mass production via hot-embossing-compatible thermoplastics. Developed parallel-flow CAD geometry, led mold fabrication, and integrated PTV software and Piezo Transducer tuning to optimize high-throughput cell transfection.</p>
-        <div class="gallery-chips">
+      </div>
+     </div>
+       <div class="gallery-chips">
           <span class="chip">CAD</span><span class="chip">Hot embossing</span><span class="chip">PDMS</span><span class="chip">PTV software</span><span class="chip">Piezo Transducer</span><span class="chip">Jan–Jun 2026</span>
         </div>
       </div>
@@ -344,6 +347,7 @@
           <div class="slide"><div class="slide-placeholder"><span class="plus">+</span><p>Add photo 2</p></div></div>
           <div class="slide"><div class="slide-placeholder"><span class="plus">+</span><p>Add photo 3</p></div></div>
         </div>
+       </div>
         <button class="slide-arrow prev">&#8592;</button>
         <button class="slide-arrow next">&#8594;</button>
         <div class="slide-dots"></div>
