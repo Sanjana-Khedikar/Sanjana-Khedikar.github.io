@@ -19,18 +19,18 @@
   .nav-links { display: flex; gap: 2rem; }
   .nav-links a { font-size: 13px; color: var(--ink-soft); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--accent); }
-
+ 
   .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 88vh; border-bottom: 1px solid var(--border); }
   .hero-left { padding: 5rem 3rem; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border); }
-  .hero-eyebrow { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
-  .hero-name { font-family: 'DM Serif Display', serif; font-size: clamp(42px, 5vw, 68px); line-height: 1.05; margin-bottom: 1.5rem; }
+  .hero-eyebrow { font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+  .hero-name { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3.5vw, 48px); line-height: 1.05; margin-bottom: 1.5rem; }
   .hero-name em { font-style: italic; color: var(--accent); }
   .hero-bio { font-size: 16px; color: var(--ink-soft); max-width: 420px; line-height: 1.75; margin-bottom: 2.5rem; }
   .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
   .btn { display: inline-block; padding: 11px 24px; font-size: 13px; font-family: 'DM Sans', sans-serif; text-decoration: none; letter-spacing: 0.03em; border-radius: 2px; transition: all 0.2s; cursor: pointer; border: none; }
   .btn-primary { background: var(--ink); color: var(--cream); }
   .btn-primary:hover { background: var(--accent); }
-  .btn-outline { background: transparent; color: var(--ink); border: 1px solid var(--border); }
+  .btn-outline { background: transparent; color: var(--ink); border: 2px solid var(--border); }
   .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
   .hero-right { background: var(--accent-light); display: flex; align-items: center; justify-content: center; padding: 3rem; position: relative; overflow: hidden; }
   .hero-photo-frame { width: 100%; max-width: 360px; aspect-ratio: 3/4; border: 1px solid var(--border); border-radius: 2px; overflow: hidden; background: #E8DDD6; }
@@ -39,13 +39,13 @@
   .stat-pill { background: var(--cream); border: 1px solid var(--border); border-radius: 2px; padding: 10px 16px; flex: 1; text-align: center; }
   .stat-num { font-family: 'DM Serif Display', serif; font-size: 22px; display: block; }
   .stat-label { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
-
+ 
   section { padding: 5rem 3rem; border-bottom: 1px solid var(--border); }
   .section-header { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 3rem; }
   .section-title { font-family: 'DM Serif Display', serif; font-size: 32px; }
   .section-line { flex: 1; height: 1px; background: var(--border); }
   .section-count { font-size: 12px; color: var(--ink-muted); letter-spacing: 0.06em; }
-
+ 
   /* GALLERY — 3 equal columns */
   .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; align-items: start; }
   .gallery-card { border: 1px solid var(--border); border-radius: 2px; overflow: hidden; background: #fff; transition: transform 0.2s, border-color 0.2s; display: flex; flex-direction: column; }
@@ -57,17 +57,21 @@
   .gallery-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 0.5rem; }
   .chip { font-size: 10px; padding: 3px 10px; border: 1px solid var(--border); border-radius: 999px; color: var(--ink-soft); letter-spacing: 0.03em; }
 
+  /* HyperSkill text-only card — matches timeline style */
+  .gallery-card.text-only { background: var(--cream); }
+  .gallery-card.text-only .gallery-body { padding: 1.5rem; }
+
   /* PERSONAL PROJECTS — same 3-col grid */
   .personal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
   .personal-card { border: 1px solid var(--border); border-radius: 2px; background: #fff; overflow: hidden; transition: transform 0.2s, border-color 0.2s; }
   .personal-card:hover { transform: translateY(-3px); border-color: var(--accent); }
   .personal-desc { font-size: 13px; color: var(--ink-soft); line-height: 1.5; padding: 0.75rem; }
-
+ 
   /* SLIDESHOW — width-based so mobile never collapses */
   .slideshow { position: relative; width: 100%; aspect-ratio: 4/3; overflow: hidden; background: var(--accent-light); }
   .slides { display: flex; width: 100%; transition: transform 0.35s ease; }
   .slide { min-width: 100%; width: 100%; flex-shrink: 0; }
-  .slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; aspect-ratio: 4/3; }
+  .slide img { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center; display: block; }
   .slide-placeholder { width: 100%; aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: var(--ink-muted); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
   .slide-placeholder .plus { font-size: 24px; font-weight: 300; }
   .slide-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background: var(--cream); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 14px; color: var(--ink); opacity: 0; transition: opacity 0.2s, background 0.15s; z-index: 2; user-select: none; line-height: 1; }
@@ -78,7 +82,7 @@
   .slide-dots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 2; }
   .slide-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(247,244,239,0.45); border: 1px solid rgba(247,244,239,0.7); cursor: pointer; transition: background 0.2s; padding: 0; }
   .slide-dot.active { background: var(--cream); }
-
+ 
   /* TIMELINE */
   .timeline { display: flex; flex-direction: column; }
   .timeline-item { display: grid; grid-template-columns: 180px 1fr; gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--border); }
@@ -90,14 +94,14 @@
   .timeline-body { font-size: 13px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 1rem; }
   .timeline-body ul { padding-left: 1.25rem; }
   .timeline-body li { margin-bottom: 4px; }
-
+ 
   /* SKILLS */
   .skills-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
   .skills-group-title { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 1rem; font-weight: 500; }
   .skills-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; }
   .skill-tag { font-size: 13px; padding: 7px 16px; border: 1px solid var(--border); border-radius: 2px; color: var(--ink-soft); transition: all 0.15s; }
   .skill-tag:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
-
+ 
   /* CONTACT */
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
   .contact-big { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 3vw, 42px); line-height: 1.2; margin-bottom: 1.5rem; }
@@ -108,10 +112,10 @@
   .contact-label { color: var(--ink-muted); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
   .contact-row a { color: var(--ink); text-decoration: none; }
   .contact-row a:hover { color: var(--accent); }
-
+ 
   footer { padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--ink-muted); }
   .footer-name { font-family: 'DM Serif Display', serif; font-size: 14px; color: var(--ink); }
-
+ 
   @media (max-width: 900px) {
     .gallery-grid { grid-template-columns: 1fr 1fr; }
     .personal-grid { grid-template-columns: 1fr 1fr; }
@@ -121,39 +125,36 @@
     .nav-links { display: none; }
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 3rem 1.5rem; border-right: none; }
-    .hero-right { min-height: 320px; padding: 2rem 1.5rem; }
-    .hero-photo-frame { max-width: 240px; }
-    .hero-stats { position: static; margin-top: 1rem; }
+    .hero-right { min-height: 320px; }
     section { padding: 3rem 1.5rem; }
     .gallery-grid { grid-template-columns: 1fr; }
     .personal-grid { grid-template-columns: 1fr; }
-    .slide-arrow { opacity: 1 !important; }
     .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
     .skills-layout { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-    .slide-arrow { opacity: 1; }
+    .slide-arrow { opacity: 1 !important; }
   }
 </style>
 </head>
 <body>
-
+ 
 <nav>
   <span class="nav-name">Sanjana Khedikar</span>
   <div class="nav-links">
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
-    <a href="#personal-projects">Personal</a>
+    <a href="#personal-projects">Other</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
-
+ 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">Mechanical Engineering at University of California, Irvine</p>
-    <h1 class="hero-name">Building things that <em>work</em> better.</h1>
+    <p class="hero-eyebrow">Mechanical Engineering at <strong>University of California, Irvine</strong></p>
+    <h1 class="hero-name">Precision in design, Impact in the field.</h1>
     <p class="hero-bio">I'm a mechanical engineer with hands-on experience in R&D, microfluidics, medical device design, and humanitarian engineering. I care about technical rigor, honest data, and real-world impact.</p>
     <div class="hero-cta">
       <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:12px;">
@@ -173,7 +174,7 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-header">
@@ -182,7 +183,7 @@
     <span class="section-count">03</span>
   </div>
   <div class="timeline">
-
+ 
     <div class="timeline-item">
       <div class="timeline-left">
         <p class="timeline-date">Dec 2024</p>
@@ -201,7 +202,7 @@
         </div>
       </div>
     </div>
-
+ 
     <div class="timeline-item">
       <div class="timeline-left">
         <p class="timeline-date">Jun–Sep 2024</p>
@@ -221,7 +222,7 @@
         </div>
       </div>
     </div>
-
+ 
     <div class="timeline-item">
       <div class="timeline-left">
         <p class="timeline-date">Nov 2023 – May 2024</p>
@@ -232,7 +233,8 @@
         <div class="slideshow" data-slideshow style="max-width: 400px; margin-bottom: 1rem;">
           <div class="slides">
             <div class="slide"><img src="XACT.png" alt="XACT experiment setup" /></div>
-            <div class="slide"><img src="XACT.png" alt="Imaging results" /></div>
+            <div class="slide"><img src="XACTsetup" alt="Imaging results" /></div>
+            <div class="slide"><img src="XACTtest" alt="results" /></div>
           </div>
           <button class="slide-arrow prev">&#8592;</button>
           <button class="slide-arrow next">&#8594;</button>
@@ -250,10 +252,10 @@
         </div>
       </div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-header">
@@ -261,9 +263,9 @@
     <div class="section-line"></div>
     <span class="section-count">03</span>
   </div>
-
+ 
   <div class="gallery-grid">
-
+ 
     <!-- Card 1: Microfluidics -->
     <div class="gallery-card">
       <div class="slideshow" data-slideshow>
@@ -285,13 +287,13 @@
         </div>
       </div>
     </div>
-
+ 
     <!-- Card 2: EWB Dallas -->
     <div class="gallery-card">
       <div class="slideshow" data-slideshow>
         <div class="slides">
           <div class="slide"><img src="dallas1.jpg" alt="Dallas drainage design" /></div>
-          <div class="slide"><img src="dallas2.png" alt="Site layout screenshot" /></div>
+          <div class="slide"><img src="dallasTOPO.png" alt="Site layout screenshot" /></div>
         </div>
         <button class="slide-arrow prev">&#8592;</button>
         <button class="slide-arrow next">&#8594;</button>
@@ -300,7 +302,7 @@
       <div class="gallery-body">
         <span class="gallery-tag">Humanitarian Engineering · EWB</span>
         <h3 class="gallery-title">Filtration System & Drainage Design</h3>
-        <p class="gallery-desc">Team lead for a gravity-fed water filtration and distribution system in Ecuador and stormwater drainage design for an 11-acre affordable housing site in Dallas.</p>
+        <p class="gallery-desc">Designed a gravity-fed water filtration and distribution system for a community in Ecuador using AutoCAD, Civil 3D, and hydraulic modeling. Led stormwater analysis and drainage design for an 11-acre affordable housing site in Dallas, using ArcGIS and collaborating with Engineers Without Borders. The first picture shows Valerie representing Operation Tiny House.</p>
         <a href="dallas-plan.pdf" target="_blank" class="btn btn-outline" style="display:inline-block; margin-bottom:0.75rem;">View Full Site Plan</a>
         <div class="gallery-chips">
           <span class="chip">AutoCAD</span><span class="chip">Civil 3D</span><span class="chip">ArcGIS</span><span class="chip">Hydraulic modeling</span><span class="chip">Sep 2024–2025</span>
@@ -309,10 +311,7 @@
     </div>
 
     <!-- Card 3: VR/AR -->
-    <div class="gallery-card">
-      <div style="width:100%; aspect-ratio:16/10; background:var(--accent-light); display:flex; align-items:center; justify-content:center;">
-        <span style="font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-muted);">VR / AR</span>
-      </div>
+    <div class="gallery-card text-only">
       <div class="gallery-body">
         <span class="gallery-tag">VR/AR · SimInsights</span>
         <h3 class="gallery-title">HyperSkill VR/AR Simulation Design</h3>
@@ -322,19 +321,19 @@
         </div>
       </div>
     </div>
-
+ 
   </div>
 </section>
-
-<!-- PERSONAL PROJECTS -->
+ 
+<!-- OTHER WORK -->
 <section id="personal-projects">
   <div class="section-header">
-    <h2 class="section-title">Personal Projects</h2>
+    <h2 class="section-title">Other Work</h2>
     <div class="section-line"></div>
   </div>
-
+ 
   <div class="personal-grid">
-
+ 
     <!-- EWB Tijuana -->
     <div class="personal-card">
       <div class="slideshow" data-slideshow>
@@ -348,9 +347,9 @@
         <button class="slide-arrow next">&#8594;</button>
         <div class="slide-dots"></div>
       </div>
-      <p class="personal-desc">International Project Chair for Engineers Without Borders.</p>
+      <p class="personal-desc">International Project Chair for Engineers Without Borders. With help from sponsors and my peers, we are able to travel to Tijuana and build a house for a family in need within a day.</p>
     </div>
-
+ 
     <!-- Robot -->
     <div class="personal-card">
       <div class="slideshow" data-slideshow>
@@ -363,7 +362,7 @@
       </div>
       <p class="personal-desc">A pneumatic piston–driven robot that uses a one-way bearing gear system for propulsion and an Arduino-based low-pass filtered PD control system with feedback to maintain heading stability.</p>
     </div>
-
+ 
     <!-- Drone -->
     <div class="personal-card">
       <div class="slideshow" data-slideshow>
@@ -377,7 +376,7 @@
       </div>
       <p class="personal-desc">Drone Project.</p>
     </div>
-
+ 
     <!-- Speculum -->
     <div class="personal-card">
       <div class="slideshow" data-slideshow>
@@ -389,12 +388,12 @@
         <button class="slide-arrow next">&#8594;</button>
         <div class="slide-dots"></div>
       </div>
-      <p class="personal-desc">4-Pronged Speculum With Light Attachment.</p>
+      <p class="personal-desc">4-Pronged Speculum With Light Attachment. We designed this speculum to be easy to use by providing clear field of vision for the user, affordable, and providing comfort to the patient from its material.</p>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-header">
@@ -424,13 +423,12 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-grid">
     <div>
-      <h2 class="contact-big">Let's work on something <em>meaningful</em> together.</h2>
-      <a href="mailto:sanjanakhedikar@gmail.com" class="btn btn-primary">Say hello</a>
+      <h2 class="contact-big">My Contacts</h2>
     </div>
     <div class="contact-details">
       <div class="contact-row">
@@ -456,12 +454,12 @@
     </div>
   </div>
 </section>
-
+ 
 <footer>
   <span class="footer-name">Sanjana Khedikar</span>
   <span>Irvine, CA · 2026</span>
 </footer>
-
+ 
 <script>
 document.querySelectorAll('[data-slideshow]').forEach(function(ss) {
   var slides = ss.querySelector('.slides');
@@ -469,22 +467,22 @@ document.querySelectorAll('[data-slideshow]').forEach(function(ss) {
   var dotsEl = ss.querySelector('.slide-dots');
   var total = allSlides.length;
   var cur = 0;
-
+ 
   for (var i = 0; i < total; i++) {
     var d = document.createElement('button');
     d.className = 'slide-dot' + (i === 0 ? ' active' : '');
     d.setAttribute('data-i', i);
     dotsEl.appendChild(d);
   }
-
+ 
   var dots = dotsEl.querySelectorAll('.slide-dot');
-
+ 
   function go(n) {
     cur = (n + total) % total;
     slides.style.transform = 'translateX(-' + (cur * 100) + '%)';
     dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
   }
-
+ 
   ss.querySelector('.prev').addEventListener('click', function(e) { e.stopPropagation(); go(cur - 1); });
   ss.querySelector('.next').addEventListener('click', function(e) { e.stopPropagation(); go(cur + 1); });
   dots.forEach(function(d) {
@@ -492,6 +490,6 @@ document.querySelectorAll('[data-slideshow]').forEach(function(ss) {
   });
 });
 </script>
-
+ 
 </body>
 </html>
